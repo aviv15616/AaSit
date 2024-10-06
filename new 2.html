@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AaronWebHelper</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #2B2B2B; /* Dark charcoal text */
+            line-height: 1.6;
+            position: relative;
+            overflow: auto; /* Allow scrolling */
+        }
+
+        /* Video Background */
+        .video-background {
+            position: fixed; /* Fixed to stay in place */
+            top: 0;
+            left: 0;
+            width: 100vw; /* Full width of viewport */
+            height: 100vh; /* Full height of viewport */
+            z-index: -1; /* Ensure video is behind other content */
+            overflow: hidden; /* Hide any overflow */
+        }
+
+        .video-background video {
+            position: absolute;
+            top: 50%; /* Center vertically */
+            left: 50%; /* Center horizontally */
+            min-width: 100%; /* Ensure video covers width */
+            min-height: 100%; /* Ensure video covers height */
+            width: auto; /* Maintain aspect ratio */
+            height: auto; /* Maintain aspect ratio */
+            transform: translate(-50%, -50%); /* Center video */
+            object-fit: cover; /* Cover entire area without distortion */
+            will-change: transform; /* Hint the browser for optimization */
+            max-width: none; /* Prevent width limitations */
+            max-height: none; /* Prevent height limitations */
+            preload: auto; /* Preload the video for better performance */
+        }
+header {
+    height: 430px; /* Set a specific height */
+    padding: 300 px 0; /* Remove padding to avoid additional height */
+    position: relative;
+    width: 100%;
+    
+    z-index: 5000;
+    background: rgba(173, 216, 230, 0.7); /* Light cream background */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+        .logo {
+            text-align: center;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        .logo img {
+            max-width: 420px; /* Set maximum width for logo image */
+            height: auto; /* Maintain aspect ratio */
+			opacity:0.8;
+        }
+
+        nav {
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            position: relative;
+            margin: 0 15px;
+        }
+nav ul li a {
+    color: #000000; /* Soft green text color */
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    font-weight: bold;
+    font-size: 1.2em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.7); /* White with 70% opacity */
+}
+
+nav ul li:hover a {
+    background-color: rgba(255, 255, 255, 1); /* Full opacity on hover */
+    transform: scale(1.1);
+}
+
+        /* Section Styles */
+        section {
+            padding: 100px 20px;
+            margin: 130px auto 20px;
+            background: rgba(255, 255, 255, 0.7); /* Very light cream background */
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            transition: transform 0.3s;
+            position: relative;
+            z-index: 2; /* Ensure sections are above video */
+        }
+
+        section:hover {
+    background-color: rgba(255, 255, 255, 0.87); /* Full opacity on hover */
+    transform: scale(1.05);
+        }
+
+        h2 {
+            color: #00000; /* Soft green */
+            text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #A8D5BA; /* Soft green */
+            position: relative;
+            margin-top: 20px;
+            box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop playsinline preload="metadata">
+            <source src="background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <header>
+        <div class="logo">
+            <img src="default.png" alt="AaronWebHelper Logo"> <!-- Replace with your logo path -->
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <p>We offer a variety of web development services to meet your needs.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Learn more about our mission and values.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>Check out our latest projects.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Get in touch with us for more information.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 AaronWebHelper. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
